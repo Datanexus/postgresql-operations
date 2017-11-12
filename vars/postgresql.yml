@@ -1,0 +1,8 @@
+# (c) 2016 DataNexus Inc.  All Rights Reserved.
+---
+application: postgresql
+postgresql_major_version: 9
+postgresql_minor_version: 6
+postgresql_data_dir: "/data/pgsql"
+postgresql_config_path: "{{ postgresql_data_dir }}"
+postgresql_daemon: "postgresql-{{ postgresql_major_version }}.{{ postgresql_minor_version }}"
