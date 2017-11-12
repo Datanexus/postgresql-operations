@@ -1,0 +1,12 @@
+# (c) 2016 DataNexus Inc.  All Rights Reserved.
+#
+# allow hosts on the same subnet
+---
+- name: configure replication user authentication
+  lineinfile:
+    dest: "{{ postgresql_config_path }}/pg_hba.conf"
+    line: "# IPv4 private external subnet\nhost    all             all             {{ external_subnet }}            trust"
+    state: present
+    insertafter: '^host\s{4}all\s{13}'
+  become: true
+  notify: restart postgresql

@@ -1,0 +1,6 @@
+# (c) Copyright 2016 DataNexus Inc.  All Rights Reserved. 
+#
+# default variables for postgres
+---
+postgresql_user: postgres
+postgresql_group: postgres
